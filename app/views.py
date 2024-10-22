@@ -1,7 +1,5 @@
-from flask import Flask, request, redirect, url_for, render_template, abort
-
-app = Flask(__name__)
-app.config.from_pyfile('config.py')
+from flask import request, redirect, url_for, render_template, abort
+from . import app
 
 @app.route('/')
 def main():  # put application's code here
@@ -45,6 +43,3 @@ def get_post(post_id):
         abort(404)
     post = posts[post_id-1]
     return render_template("detail_post.html", post=post)
-
-if __name__ == '__main__':
-    app.run()
