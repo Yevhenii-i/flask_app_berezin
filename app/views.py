@@ -12,6 +12,11 @@ def home():
 
     return render_template("home.html", agent=agent)
 
+@app.route('/resume')
+def resume():
+    return render_template("resume.html")
+
+
 @app.route('/hi/<string:name>')
 def greetings(name):
     name = name.upper()
