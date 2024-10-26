@@ -15,9 +15,9 @@
         <h1>MySite</h1>
         <div class="navbar-collapse">
           <div class="navbar-nav">
-            <a class="nav-link" href="http://localhost:8080/homepage">Home</a>
-            <a class="nav-link" href="http://localhost:8080/resume">Resume</a>
-            <a class="nav-link" href="http://localhost:8080/post/">Posts</a>
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('resume') }}">Resume</a>
+            <a class="nav-link" href="{{ url_for('posts.get_posts') }}">Posts</a>
 <!--            <a class="nav-link" href="#">Disabled</a> -->
           </div>
         </div>

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bddef866-f7e9-44d5-95ab-46a982958b9c" name="Changes" comment="Improved file hierarchy">
-      <change afterPath="$PROJECT_DIR$/app/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/resume.html" afterDir="false" />
+    <list default="true" id="bddef866-f7e9-44d5-95ab-46a982958b9c" name="Changes" comment="Improved base.html template, created style.css, created resume page resume.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/resume.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +137,9 @@
       <workItem from="1729366201600" duration="1672000" />
       <workItem from="1729571443568" duration="7119000" />
       <workItem from="1729858115184" duration="5391000" />
-      <workItem from="1729879855008" duration="4347000" />
+      <workItem from="1729879855008" duration="8031000" />
+      <workItem from="1729937214126" duration="3051000" />
+      <workItem from="1729958304911" duration="970000" />
     </task>
     <task id="LOCAL-00001" summary="Created few useful files">
       <option name="closed" value="true" />
@@ -229,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729581893138</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Improved base.html template, created style.css, created resume page resume.html">
+      <option name="closed" value="true" />
+      <created>1729884492526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729884492526</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,9 +266,10 @@
     <MESSAGE value="Add a lot of html" />
     <MESSAGE value="Create better file hierarchy" />
     <MESSAGE value="Improved file hierarchy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved file hierarchy" />
+    <MESSAGE value="Improved base.html template, created style.css, created resume page resume.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved base.html template, created style.css, created resume page resume.html" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flask_app_berezin$flask_app_Berezin.coverage" NAME="flask_app_Berezin Coverage Results" MODIFIED="1729884226962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_app_berezin$flask_app_Berezin.coverage" NAME="flask_app_Berezin Coverage Results" MODIFIED="1729959063509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

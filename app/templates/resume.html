@@ -3,38 +3,89 @@
 
 {% block content %}
     <nav class="navbar sidebar">
-
+        <a class="nav-link" href="#about-self">About myself</a><br>
+        <a class="nav-link" href="#education">Education</a><br>
+        <a class="nav-link" href="#skills">Skills</a><br>
+        <a class="nav-link" href="#work-exp">Work experience</a>
     </nav>
 
 	<section id="about-self">
     <h1> About myself</h1>
     <a>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis, enim vitae consequat viverra, felis erat lobortis arcu, id porttitor tortor ante a orci. Etiam mollis non diam et consequat. Nunc sed sapien efficitur, dapibus ipsum eu, semper ex. Praesent auctor imperdiet lorem non tincidunt. Praesent laoreet sollicitudin tortor, non interdum ligula facilisis eu. Suspendisse sodales quam eget lacus aliquet, molestie rhoncus odio malesuada. Nulla eget eros tempus, condimentum purus eu, porta nisl. Phasellus cursus, purus eu hendrerit eleifend, eros magna hendrerit neque, at feugiat mi massa ut diam. Nam volutpat rutrum nunc ut egestas. Pellentesque odio augue, finibus a risus id, molestie tempus libero. Nam a tellus faucibus, rutrum arcu vel, tempus nisi. Phasellus facilisis tristique pellentesque. Pellentesque a turpis in nunc commodo faucibus.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Nam laoreet arcu vel pretium tempus. Praesent sit amet tellus sit amet erat lobortis ullamcorper in vitae odio. Praesent auctor elit non fermentum condimentum. Morbi quis aliquam sem, a lobortis elit. Fusce congue et velit sed vestibulum. Aliquam consectetur magna eu porttitor mattis. Nunc sed arcu ac magna volutpat cursus eu sed libero. Proin in vehicula arcu.
-
-Donec volutpat vitae leo vel ultricies. Proin vel auctor mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus augue lacus, viverra eget justo eget, suscipit blandit nunc. Ut et dictum tellus. Cras vitae dolor ligula. Quisque a elit in neque condimentum commodo. Integer pharetra purus id enim semper condimentum. Cras hendrerit, ipsum at euismod semper, dolor felis interdum sapien, ac egestas lacus ex in lectus. Proin ac velit sit amet arcu rhoncus egestas. Phasellus mollis, erat nec blandit mollis, quam nisi aliquet erat, eu fringilla risus tellus ut erat. Integer nibh risus, interdum eget elit et, fringilla laoreet eros. Praesent pulvinar, nunc eget feugiat facilisis, quam libero imperdiet purus, ac eleifend dolor tortor et nisl. Suspendisse vestibulum massa vitae elit faucibus, vitae egestas purus eleifend. Proin molestie tellus quam, vestibulum hendrerit urna finibus at.
+        My name is Yevhenii Berezin, and i am a student <br>
+        I am studying at Precarpatian national university <br>
+        I have a lot of different activities that I can spend my time on, like:
+        <ul>
+            <li>Listening to music</li>
+            <li>Playing games</li>
+            <li>Walking around the city</li>
+            <li>Watching media-content</li>
+            <li>Arguing on Internet</li>
+        </ul>
+        I actively try to improve my knowledge in various fields,
+        as I like "finally getting to understand" something <br>
+        This page is one more example of previous words!
     </a>
     </section>
 
     <section id="education">
     <h1> Education</h1>
     <a>
-
+        I studied in Lyceum №5 for 11 years <br>
+        Here I`ve learned a lot of useful things:
+        <ul>
+            <li>German language</li>
+            <li>English language</li>
+            <li>Polish language</li>
+            <li>Ukrainian language</li>
+            <li>How to work with PC</li>
+            <li>Programming (on the base level)</li>
+        </ul>
+        Also in the span of 11 years I`ve achieved a lot in terms of winning Olympiads in subjects:
+        <ul>
+            <li>Mathematics</li>
+            <li>Informatics</li>
+            <li>Information Technologies</li>
+            <li>Physics</li>
+            <li>Chemistry</li>
+            <li>Ukrainian language</li>
+            <li>Jurisprudence</li>
+            <li>Biology</li>
+            <li>Physical Education (Rifle shooting)</li>
+        </ul>
+        Currently I am studying at 3rd year of Precarpatian national university <br>
+        Here I am studying "Software Engineering"<br>
+        <img src="{{ url_for('static', filename='images/pnu.png') }}">
     </a>
     </section>
 
     <section id="skills">
     <h1> Skills</h1>
     <a>
-
+        I have next list of skills:
+        <ul>
+            <li>
+                Programming on different languages:
+                <ul>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Rust</li>
+                </ul>
+            </li>
+            <li>Creating front-end of web-application (using HTML, CSS, JS)</li>
+            <li>Creating back-end of web-application (using Java(Spring) or Python(Flask))</li>
+            <li>Creating mock-ups (using Photopea, Figma)</li>
+        </ul>
     </a>
     </section>
 
     <section id="work-exp">
     <h1> Work experience (Projects)</h1>
     <a>
-
+        I have no real work experience, but am currently working on
+        Spring project (web-notebook) and Flask project.
+        <br><br>
     </a>
     </section>
 {% endblock %}
