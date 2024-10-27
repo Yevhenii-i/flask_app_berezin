@@ -43,11 +43,19 @@ a{
     padding-right: 10px;
 }
 
-.sidebar{
+.sidebar {
     position: sticky;
     top: 100px;
     margin-left: 85%;
     width: fit-content;
+}
+
+.s_resume {
     height: 300px;
     margin-bottom: -300px;
+}
+
+.s_hi {
+    height: 150px;
+    margin-bottom: -150px;
 }
