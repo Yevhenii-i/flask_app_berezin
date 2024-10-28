@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bddef866-f7e9-44d5-95ab-46a982958b9c" name="Changes" comment="Created dedicated for user-oriented pages package, updated few templates">
-      <change afterPath="$PROJECT_DIR$/app/templates/footer.html" afterDir="false" />
+    <list default="true" id="bddef866-f7e9-44d5-95ab-46a982958b9c" name="Changes" comment="Upgraded html files">
+      <change afterPath="$PROJECT_DIR$/test_user_bp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/posts/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/templates/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/templates/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/templates/resume.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +18,9 @@
       <list>
         <option value="Flask Main" />
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -91,11 +87,11 @@
       <recent name="D:\Yevhenii\університет\flask_app_berezin\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Yevhenii\університет\flask_app_berezin" />
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\tests" />
       <recent name="D:\Yevhenii\університет\flask_app_berezin\app\users\templates" />
       <recent name="D:\Yevhenii\університет\flask_app_berezin\app\posts\templates" />
       <recent name="D:\Yevhenii\університет\flask_app_berezin\app\posts" />
-      <recent name="D:\Yevhenii\університет\flask_app_berezin\app" />
-      <recent name="D:\Yevhenii\університет\flask_app_berezin" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,7 +141,7 @@
       <workItem from="1729937214126" duration="3051000" />
       <workItem from="1729958304911" duration="2237000" />
       <workItem from="1730059024469" duration="5020000" />
-      <workItem from="1730143104017" duration="293000" />
+      <workItem from="1730143104017" duration="2733000" />
     </task>
     <task id="LOCAL-00001" summary="Created few useful files">
       <option name="closed" value="true" />
@@ -259,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730064050697</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Upgraded html files">
+      <option name="closed" value="true" />
+      <created>1730143568553</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730143568553</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,9 +295,10 @@
     <MESSAGE value="Improved base.html template, created style.css, created resume page resume.html" />
     <MESSAGE value="Improved base.html template (added url_for), improved appearance of web-pages, added content to resume.html" />
     <MESSAGE value="Created dedicated for user-oriented pages package, updated few templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created dedicated for user-oriented pages package, updated few templates" />
+    <MESSAGE value="Upgraded html files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded html files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flask_app_berezin$flask_app_Berezin.coverage" NAME="flask_app_Berezin Coverage Results" MODIFIED="1730143278278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_app_berezin$flask_app_Berezin.coverage" NAME="flask_app_Berezin Coverage Results" MODIFIED="1730145683280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
