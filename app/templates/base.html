@@ -9,30 +9,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-<header>
-    <nav class="navbar">
-      <div>
-        <h1>MySite</h1>
-        <div class="navbar-collapse">
-          <div class="navbar-nav">
-            <a class="nav-link" href="{{ url_for('users.home') }}">Home</a>
-            <a class="nav-link" href="{{ url_for('users.resume') }}">Resume</a>
-            <a class="nav-link" href="{{ url_for('posts.get_posts') }}">Posts</a>
-<!--            <a class="nav-link" href="#">Disabled</a> -->
-          </div>
-        </div>
-      </div>
-    </nav>
-</header>
+
     {% block content %}
         Hello
     {% endblock %}
-<footer>
-    <div class="footer-information">
-        <a class="info-text">example.mail@gmail.com</a>
-        <a class="info-text">+380123456789</a>
-        <a class="info-text">Name Surname</a>
-    </div>
-</footer>
+
 </body>
 </html>
