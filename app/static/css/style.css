@@ -12,14 +12,14 @@ a{
     font-size: 18px;
 }
 
-.navbar{
+.my_navbar{
     text-align: center;
     background-color: azure;
     padding: 0;
     margin: 0;
 }
 
-.nav-link{
+.my_nav-link{
     display: inline-block;
     width: auto;
     padding: 20px;
