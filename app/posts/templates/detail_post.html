@@ -1,15 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Post № {{ post["id"] }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Post {{ post["id"] }} {% endblock %}
+{% block css %}
+
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/posts.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+{% endblock %}
+
+{% block content %}
+{% include 'header.html' %}
+
 <h1> Post № {{ post["id"] }} - {{ post["title"] }} </h1>
 <p> {{ post.get("content") }}</p>
 <a href="{{ url_for("posts.get_posts") }}"> Return to posts</a>
-</body>
-</html>
+{% include 'footer.html' %}
+{% endblock %}
