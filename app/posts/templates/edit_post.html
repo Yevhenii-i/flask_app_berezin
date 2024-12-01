@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit Post {% endblock %}
+
+{% block content %}
+{% include 'header.html' %}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.title.label }} {{ form.title() }}
+
+            {% for error in form.title.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+        {{ form.content.label }} {{ form.content() }}
+
+            {% for error in form.content.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.is_active.label }} {{ form.is_active() }}
+
+            {% for error in form.is_active.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.publish_date.label }} {{ form.publish_date() }}
+
+            {% for error in form.publish_date.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.category.label }} {{ form.category() }}
+
+            {% for error in form.category.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.submit(class="btn btn-success") }}
+
+    </form>
+
+    <a href="{{ url_for('posts.get_posts') }}" class="btn btn-danger">Cancel</a>
+    {% include 'footer.html' %}
+{% endblock %}
