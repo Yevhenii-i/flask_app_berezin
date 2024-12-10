@@ -30,3 +30,4 @@ def create_app(config_name="config"):
     return app
 
 import app.posts.models
+import app.users.models

@@ -41,6 +41,20 @@
             {% endfor %}
         <br>
 
+        {{ form.author_id.label }} {{ form.author_id() }}
+
+            {% for error in form.author_id.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.tags.label }} {{ form.tags() }}
+
+            {% for error in form.tags.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
         {{ form.submit(class="btn btn-success") }}
 
     </form>

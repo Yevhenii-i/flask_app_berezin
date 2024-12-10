@@ -3,24 +3,40 @@ from flask import render_template, abort, flash, redirect, url_for, jsonify, req
 from .forms import PostForm
 import json
 
-from .models import Post
+from .models import Post, Tag
 from .. import db
+from ..users.models import User
 
 JSON_FILE = 'posts.json'
 
 @post_bp.route('/add_post', methods=['GET', 'POST'])
 def add_post():
     form = PostForm()
+
+    authors = User.query.all()
+    form.author_id.choices = [(author.id, author.username) for author in authors]
+
+    tags = Tag.query.all()
+    form.tags.choices = [(tag.id, tag.name) for tag in tags]
+
     if form.validate_on_submit():
+        #print(form.author_id.data)
         new_post = Post(
             title=form.title.data,
             content=form.content.data,
             is_active=form.is_active.data,
             posted=form.publish_date.data,
             category=form.category.data,
-            author=session.get("username", "Unknown")
+            user_id=form.author_id.data,
         )
         db.session.add(new_post)
+
+        db.session.commit()
+
+        for tag in form.tags.data:
+            #print(tag)
+            new_post.tags.append(db.session.scalar(db.select(Tag).filter_by(id=tag)))
+
         db.session.commit()
 
         """try:
@@ -99,6 +115,8 @@ def edit_post(post_id):
         post.is_active = form.is_active.data
         post.publish_date = form.publish_date.data
         post.category = form.category.data
+        post.user_id = form.author_id.data
+        post.tags = form.tags.data
 
         db.session.commit()
         flash("Post updated successfully!")
