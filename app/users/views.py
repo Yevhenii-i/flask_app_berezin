@@ -2,6 +2,10 @@ from . import users_bp
 from flask import render_template, request, redirect, url_for, make_response, session, flash
 from datetime import timedelta, datetime
 
+from .forms import LoginForm, RegistrationForm
+from .models import User
+from .. import db
+
 users_info = [
     {"username" : "admin", "password" : "admin"}
 ]
@@ -20,6 +24,46 @@ def get_profile():
 
 @users_bp.route('/login', methods=['GET', 'POST'])
 def login():
+    form1 = LoginForm()
+    form2 = RegistrationForm()
+
+    errors1 = [{'field': key, 'messages': form1.errors[key]} for key in form1.errors.keys()] if form1.errors else []
+    errors2 = [{'field': key, 'messages': form2.errors[key]} for key in form2.errors.keys()] if form2.errors else []
+
+    for error in errors1+errors2:
+        flash(error["messages"], 'danger')
+
+    if request.method == 'POST':
+        if request.form.get('action') == 'login' and form1.validate_on_submit():
+            email = form1.email.data
+            password = form1.password.data
+            #remember = form1.remember.data
+
+            user = User.query.filter_by(email=email).first()
+            if user:
+                if user.check_password(password):
+                    session["username"] = user.username
+                    return redirect(url_for('users.get_profile'))
+            else:
+                flash("There is no such user", 'danger')
+
+        elif request.form.get('action') == 'register' and form2.validate_on_submit():
+
+            new_user = User(
+                username=form2.username.data,
+                email=form2.email.data,
+
+            )
+            new_user.set_password(form2.password.data)
+            session["username"] = str(new_user.username)
+
+            db.session.add(new_user)
+
+            db.session.commit()
+
+            return redirect(url_for('users.get_profile'))
+
+    """
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
@@ -30,7 +74,8 @@ def login():
                 flash("Success: logged in successfully.", "success")
                 return redirect(url_for('users.get_profile'))
         flash("Warning: wrong login or password.", "danger")
-    return render_template("login.html")
+    """
+    return render_template("login.html", form1=form1, form2=form2)
 
 @users_bp.route('/logout')
 def logout():
