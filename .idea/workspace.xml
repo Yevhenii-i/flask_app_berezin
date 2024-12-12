@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bddef866-f7e9-44d5-95ab-46a982958b9c" name="Changes" comment="Created few useful files" />
+    <list default="true" id="bddef866-f7e9-44d5-95ab-46a982958b9c" name="Changes" comment="Lab8. migrations (forgot firstly)">
+      <change afterPath="$PROJECT_DIR$/app/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/posts/templates/add_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/templates/add_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/data.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/data.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +23,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -29,20 +42,28 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev-6" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Yevhenii-i"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Yevhenii-i&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Yevhenii-i/flask_app_berezin.git",
-    "accountId": "d19300ec-4588-402f-9637-96d383199877"
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="f40c2b4b-20ce-4c44-9be4-38d6ec3151e5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Yevhenii-i/flask_app_berezin.git&quot;,
+    &quot;accountId&quot;: &quot;d19300ec-4588-402f-9637-96d383199877&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -54,9 +75,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Flask server.flask_app_Berezin.executor": "Run",
+    "Python.run.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "dev-7",
+    "last_opened_file_path": "D:/Yevhenii/університет/flask_app_berezin/app/posts/templates",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,16 +91,30 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\app\posts\templates" />
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\app" />
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\app\posts\static\css" />
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\tests" />
+      <recent name="D:\Yevhenii\університет\flask_app_berezin" />
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\app\users\templates" />
+      <recent name="D:\Yevhenii\університет\flask_app_berezin\app\posts\templates" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="flask_app_Berezin" type="Python.FlaskServer">
       <module name="flask_app_Berezin" />
-      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="target" value="$PROJECT_DIR$/run.py" />
       <option name="targetType" value="PATH" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -102,7 +141,35 @@
       <updated>1728845629609</updated>
       <workItem from="1728845635508" duration="366000" />
       <workItem from="1728846010169" duration="219000" />
-      <workItem from="1728846312951" duration="1033000" />
+      <workItem from="1728846312951" duration="2088000" />
+      <workItem from="1728848786797" duration="13000" />
+      <workItem from="1729081490825" duration="10248000" />
+      <workItem from="1729098508930" duration="5000" />
+      <workItem from="1729366201600" duration="1672000" />
+      <workItem from="1729571443568" duration="7119000" />
+      <workItem from="1729858115184" duration="5391000" />
+      <workItem from="1729879855008" duration="8031000" />
+      <workItem from="1729937214126" duration="3051000" />
+      <workItem from="1729958304911" duration="2237000" />
+      <workItem from="1730059024469" duration="5020000" />
+      <workItem from="1730143104017" duration="4008000" />
+      <workItem from="1730300215819" duration="4741000" />
+      <workItem from="1730650050059" duration="13513000" />
+      <workItem from="1730704869433" duration="13221000" />
+      <workItem from="1730811208238" duration="4000" />
+      <workItem from="1730906818436" duration="2859000" />
+      <workItem from="1731161394706" duration="13000" />
+      <workItem from="1731429697276" duration="7181000" />
+      <workItem from="1731962045800" duration="4598000" />
+      <workItem from="1732137179330" duration="52000" />
+      <workItem from="1732379579335" duration="7783000" />
+      <workItem from="1733070029158" duration="3545000" />
+      <workItem from="1733080955777" duration="1098000" />
+      <workItem from="1733082078739" duration="626000" />
+      <workItem from="1733082722878" duration="5340000" />
+      <workItem from="1733335368092" duration="169000" />
+      <workItem from="1733851694245" duration="9719000" />
+      <workItem from="1734014746250" duration="15592000" />
     </task>
     <task id="LOCAL-00001" summary="Created few useful files">
       <option name="closed" value="true" />
@@ -112,17 +179,217 @@
       <option name="project" value="LOCAL" />
       <updated>1728847055425</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated requirements">
+      <option name="closed" value="true" />
+      <created>1728847400928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728847400928</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add homepage (1)">
+      <option name="closed" value="true" />
+      <created>1729083352744</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729083352744</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add greetings (1)">
+      <option name="closed" value="true" />
+      <created>1729084575456</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729084575456</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add greetings (2)">
+      <option name="closed" value="true" />
+      <created>1729084957544</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729084957544</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add admin">
+      <option name="closed" value="true" />
+      <created>1729085656442</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729085656442</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add config">
+      <option name="closed" value="true" />
+      <created>1729085906478</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729085906478</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add 2 html pages and modified app.py">
+      <option name="closed" value="true" />
+      <created>1729088824334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729088824334</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add a lot of html">
+      <option name="closed" value="true" />
+      <created>1729091797753</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729091797753</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Create better file hierarchy">
+      <option name="closed" value="true" />
+      <created>1729579235115</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729579235115</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Improved file hierarchy">
+      <option name="closed" value="true" />
+      <created>1729581893138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1729581893138</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Improved base.html template, created style.css, created resume page resume.html">
+      <option name="closed" value="true" />
+      <created>1729884492526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729884492526</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Improved base.html template (added url_for), improved appearance of web-pages, added content to resume.html">
+      <option name="closed" value="true" />
+      <created>1729959471809</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729959471809</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Created dedicated for user-oriented pages package, updated few templates">
+      <option name="closed" value="true" />
+      <created>1730064050697</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730064050697</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Upgraded html files">
+      <option name="closed" value="true" />
+      <created>1730143568553</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730143568553</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Created unit testing (it doesn`t work from the folder for some reason...)">
+      <option name="closed" value="true" />
+      <created>1730145933999</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1730145933999</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Lab5. Added profile and login pages, cookies, sessions, flash-notifications">
+      <option name="closed" value="true" />
+      <created>1730745070994</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1730745070994</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Lab6. Added database, modified other code for it to be handled accurately">
+      <option name="closed" value="true" />
+      <created>1733088748877</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733088748877</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Lab6. Added files that I forgot to add with previous commit">
+      <option name="closed" value="true" />
+      <created>1733088816701</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733088816701</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Lab8. Models: posts, users, tags; Modified templates and views">
+      <option name="closed" value="true" />
+      <created>1733864311783</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733864311783</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Lab8. migrations (forgot firstly)">
+      <option name="closed" value="true" />
+      <created>1733864368333</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733864368333</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created few useful files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created few useful files" />
+    <MESSAGE value="Updated requirements" />
+    <MESSAGE value="Add homepage (1)" />
+    <MESSAGE value="Add greetings (1)" />
+    <MESSAGE value="Add greetings (2)" />
+    <MESSAGE value="Add admin" />
+    <MESSAGE value="Add config" />
+    <MESSAGE value="Add 2 html pages and modified app.py" />
+    <MESSAGE value="Add a lot of html" />
+    <MESSAGE value="Create better file hierarchy" />
+    <MESSAGE value="Improved file hierarchy" />
+    <MESSAGE value="Improved base.html template, created style.css, created resume page resume.html" />
+    <MESSAGE value="Improved base.html template (added url_for), improved appearance of web-pages, added content to resume.html" />
+    <MESSAGE value="Created dedicated for user-oriented pages package, updated few templates" />
+    <MESSAGE value="Upgraded html files" />
+    <MESSAGE value="Created unit testing (it doesn`t work from the folder for some reason...)" />
+    <MESSAGE value="Lab5. Added profile and login pages, cookies, sessions, flash-notifications" />
+    <MESSAGE value="Lab6. Added database, modified other code for it to be handled accurately" />
+    <MESSAGE value="Lab6. Added files that I forgot to add with previous commit" />
+    <MESSAGE value="Lab8. Models: posts, users, tags; Modified templates and views" />
+    <MESSAGE value="Lab8. migrations (forgot firstly)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab8. migrations (forgot firstly)" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Python.FlaskServer">
+        <watch expression="form2.password" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flask_app_berezin$flask_app_Berezin.coverage" NAME="flask_app_Berezin Coverage Results" MODIFIED="1728846443348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flask_app_berezin$flask_app_Berezin.coverage" NAME="flask_app_Berezin Coverage Results" MODIFIED="1732398468111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_app_berezin_new$flask_app_Berezin.coverage" NAME="flask_app_Berezin Coverage Results" MODIFIED="1734035633129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_app_berezin_new$run.coverage" NAME="run Coverage Results" MODIFIED="1733063774649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

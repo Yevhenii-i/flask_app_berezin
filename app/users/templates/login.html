@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title  %}Greeting Page {% endblock %}
+
+{% block content %}
+
+    {% include 'header.html' %}
+
+    <div class="d-flex justify-content-center align-items-center py-5 bg-body-tertiary">
+
+
+
+    <div class="m-5">
+
+    <form action="" method="post">
+        {{ form1.hidden_tag() }}
+
+        <h1 class="h3 mb-3 fw-normal">Log in</h1>
+
+        <div class="form-floating">
+            {{ form1.email.label }} {{ form1.email() }}
+
+            {% for error in form1.email.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form1.password.label }} {{ form1.password() }}
+
+            {% for error in form1.password.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+        <!--
+        <div class="form-floating">
+            { form1.remember.label }} { form1.remember() }}
+
+            { for error in form1.remember.errors %}
+                <small>{ error }}</small><br>
+            { endfor %}
+        </div>-->
+
+        <button type="submit" name="action" value="login" class="btn btn-primary w-100 py-2">Log In</button>
+        <!--{ form1.submit(class="btn btn-primary w-100 py-2", value="login") }}-->
+
+    </form>
+
+    </div>
+    <div class="m-5">
+
+    <form action="" method="post">
+        {{ form2.hidden_tag() }}
+
+        <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+        <div class="form-floating">
+            {{ form2.username.label }} {{ form2.username() }}
+
+            {% for error in form2.username.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form2.email.label }} {{ form2.email() }}
+
+            {% for error in form2.email.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form2.password.label }} {{ form2.password() }}
+
+            {% for error in form2.password.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form2.confirm_password.label }} {{ form2.confirm_password() }}
+
+            {% for error in form2.confirm_password.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <button type="submit" name="action" value="register" class="btn btn-primary w-100 py-2">Register</button>
+        <!--{ form2.submit(class="btn btn-primary w-100 py-2", value="register") }}-->
+
+    </form>
+
+    </div>
+
+    </div>
+
+    {% include 'footer.html' %}
+{% endblock %}
+

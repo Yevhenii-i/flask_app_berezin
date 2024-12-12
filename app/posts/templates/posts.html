@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %} Posts {% endblock %}
+{% block css %}
+
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/posts.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+{% endblock %}
+
+{% block content %}
+{% include 'header.html' %}
+
+
+<h1> Articles </h1>
+
+
+<div class="container">
+
+<form action="{{ url_for(".add_post") }}" class="mb-4">
+    <button type="submit" class="btn btn-primary">Add post</button>
+</form>
+    <div class="row mt-n5">
+
+    {% for post in posts %}
+        {% if post["is_active"] == True %}
+
+        <div class="col-md-6 col-lg-4 mt-5 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+            <div class="blog-grid">
+                <div class="blog-grid-img position-relative"><img height="150px" alt="img" src="{{ url_for('.static', filename='images/default.png') }}"></div>
+                <div class="blog-grid-text p-4">
+                    <h3 class="h5 mb-3"><a href="{{ url_for("posts.get_post", post_id=post['id']) }}"> {{ post["title"] }} </a></h3>
+                    <p class="display-30"> {{ post["content"] | truncate(23) }} </p>
+                    <div class="meta meta-style2">
+                        <ul>
+                            <li><a>  {{ post["category"] }} </a></li>
+                            <li><a><i class="fas fa-calendar-alt"></i> {{ post["posted"] }}</a></li>
+                            <li><a><i class="fas fa-user"></i> {{ post["author"] }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+    </div>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}
+

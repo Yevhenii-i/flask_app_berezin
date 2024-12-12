@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title  %}Greeting Page {% endblock %}
+
+{% block content %}
+
+    {% include 'header.html' %}
+
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.title.label }} {{ form.title() }}
+
+            {% for error in form.title.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+        {{ form.content.label }} {{ form.content() }}
+
+            {% for error in form.content.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.is_active.label }} {{ form.is_active() }}
+
+            {% for error in form.is_active.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.publish_date.label }} {{ form.publish_date() }}
+
+            {% for error in form.publish_date.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.category.label }} {{ form.category() }}
+
+            {% for error in form.category.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.author_id.label }} {{ form.author_id() }}
+
+            {% for error in form.author_id.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.tags.label }} {{ form.tags() }}
+
+            {% for error in form.tags.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        <br>
+
+        {{ form.submit(class="btn btn-success") }}
+
+    </form>
+
+    <a class="btn btn-primary" href="{{ url_for("posts.get_posts") }}"> Return to posts</a>
+
+    {% include 'footer.html' %}
+{% endblock %}
