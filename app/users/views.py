@@ -5,25 +5,45 @@ from datetime import timedelta, datetime
 from .forms import LoginForm, RegistrationForm
 from .models import User
 from .. import db
+from flask_login import login_user, logout_user, current_user, login_required
+
+from app import load_user
 
 users_info = [
     {"username" : "admin", "password" : "admin"}
 ]
 
-@users_bp.route('/profile')
-def get_profile():
-    if "username" in session:
-        cookies = []
-        for cookie in request.cookies:
-            if cookie != 'session':
-                cookies.append([cookie, request.cookies[cookie]]) # ім'я, значення
-        username_value = session["username"]
-        color_value = session["color"]
-        return render_template("profile.html", username=username_value, cookies=cookies, color=color_value)
-    return redirect(url_for("users.login"))
+@users_bp.route('/account')
+@login_required
+def get_account():
+#    if "username" in session:
+    #username = session["username"]
+#    user = User.query.filter_by(username=username).first()
+    user = current_user
+    username = user.username
+    id = user.id
+    email = user.email
+    password = user.password
+
+    return render_template("account.html", username=username, id=id, email=email, password=password)
+    #return redirect(url_for("users.login"))
+
+@users_bp.route("/all_accounts")
+@login_required
+def get_all_accounts():
+    users = User.query.all()
+
+    if len(users) == 0:
+        return render_template("all_accounts.html", users=users)
+
+    return render_template("all_accounts.html", users=users, count=len(users))
 
 @users_bp.route('/login', methods=['GET', 'POST'])
 def login():
+
+    if current_user.is_authenticated:
+        return redirect(url_for('users.get_account'))
+
     form1 = LoginForm()
     form2 = RegistrationForm()
 
@@ -42,8 +62,10 @@ def login():
             user = User.query.filter_by(email=email).first()
             if user:
                 if user.check_password(password):
-                    session["username"] = user.username
-                    return redirect(url_for('users.get_profile'))
+                    login_user(user)
+                    #session["username"] = user.username
+                    flash("You have successfully logged in.", 'success')
+                    return redirect(url_for('users.get_account'))
             else:
                 flash("There is no such user", 'danger')
 
@@ -55,13 +77,18 @@ def login():
 
             )
             new_user.set_password(form2.password.data)
-            session["username"] = str(new_user.username)
+
 
             db.session.add(new_user)
 
             db.session.commit()
 
-            return redirect(url_for('users.get_profile'))
+            print(new_user.id, type(new_user.id))  # Check ID and type
+            print(new_user.get_id())
+
+            login_user(new_user)
+            flash("Your account has been created", 'success')
+            return redirect(url_for('users.get_account'))
 
     """
     if request.method == "POST":
@@ -79,9 +106,23 @@ def login():
 
 @users_bp.route('/logout')
 def logout():
-    session.pop("username", None)
-    session.pop("age", None)
-    return redirect(url_for('users.get_profile'))
+    #session.pop("username", None)
+    #session.pop("age", None)
+    logout_user()
+    flash("You have logged out.", "success")
+    return redirect(url_for('users.get_account'))
+
+@users_bp.route('/profile')
+def get_profile():
+    if "username" in session:
+        cookies = []
+        for cookie in request.cookies:
+            if cookie != 'session':
+                cookies.append([cookie, request.cookies[cookie]]) # ім'я, значення
+        username_value = session["username"]
+        color_value = session["color"]
+        return render_template("profile.html", username=username_value, cookies=cookies, color=color_value)
+    return redirect(url_for("users.login"))
 
 @users_bp.route('/change_colors', methods=['GET', 'POST'])
 def change_colors():
