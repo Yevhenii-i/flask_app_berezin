@@ -1,8 +1,11 @@
+
 from . import users_bp
 from flask import render_template, request, redirect, url_for, make_response, session, flash
 from datetime import timedelta, datetime
 
-from .forms import LoginForm, RegistrationForm
+from werkzeug.utils import secure_filename
+import os
+from .forms import LoginForm, RegistrationForm, UpdateAccountForm
 from .models import User
 from .. import db
 from flask_login import login_user, logout_user, current_user, login_required
@@ -13,6 +16,34 @@ users_info = [
     {"username" : "admin", "password" : "admin"}
 ]
 
+@users_bp.route('/edit_account', methods=['GET', 'POST'])
+@login_required
+def edit_account():
+    user = current_user
+    form = UpdateAccountForm(obj=user)
+    if request.method == 'POST' and form.validate_on_submit():
+        print("Uploaded file:", form.image_file.data)
+
+        if form.image_file.data:
+            image_file = save_image(form.image_file.data)
+            print("Saved file:", image_file)
+        else:
+            image_file = 'default.jpg'
+
+        user.username = form.username.data
+        user.set_password(form.password.data)
+        user.email = form.email.data
+        user.image_file = image_file
+        user.about_me = form.about_me.data
+        user.last_seen = datetime.now()
+
+        db.session.commit()
+        flash("User updated successfully!", 'success')
+
+        return redirect(url_for('users.get_account'))
+
+    return render_template('edit_account.html', form=form)
+
 @users_bp.route('/account')
 @login_required
 def get_account():
@@ -20,12 +51,18 @@ def get_account():
     #username = session["username"]
 #    user = User.query.filter_by(username=username).first()
     user = current_user
+    user.last_seen = datetime.now()
+    db.session.commit()
     username = user.username
     id = user.id
     email = user.email
     password = user.password
+    image = user.image_file
+    last_seen = user.last_seen
+    about_me = user.about_me
 
-    return render_template("account.html", username=username, id=id, email=email, password=password)
+    return render_template("account.html", username=username, id=id, email=email, password=password, image=image,
+                           last_seen=last_seen, about_me=about_me)
     #return redirect(url_for("users.login"))
 
 @users_bp.route("/all_accounts")
@@ -83,8 +120,8 @@ def login():
 
             db.session.commit()
 
-            print(new_user.id, type(new_user.id))  # Check ID and type
-            print(new_user.get_id())
+            #print(new_user.id, type(new_user.id))  # Check ID and type
+            #print(new_user.get_id())
 
             login_user(new_user)
             flash("Your account has been created", 'success')
@@ -216,4 +253,13 @@ def get_all_cookies():
     cookies = 0
 
 
+def save_image(image):
+    filename = secure_filename(image.filename)
 
+    ext = filename.split('.')[-1]
+    unique_filename = f"{os.urandom(8).hex()}.{ext}"
+    image_path = "D:/університет/ІПЗ-31_Березін/flask_app_berezin_new/app/static/images/" + unique_filename
+    #image_path = url_for('static', filename='images/' + unique_filename)
+    image.save(image_path)
+
+    return unique_filename

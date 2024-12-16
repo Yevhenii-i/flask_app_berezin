@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title  %}Edit account {% endblock %}
+
+{% block content %}
+
+    {% include 'header.html' %}
+
+<form action="" method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+
+        <h1 class="h3 mb-3 fw-normal">Edit</h1>
+
+        <div class="form-floating">
+            {{ form.username.label }} {{ form.username() }}
+
+            {% for error in form.username.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form.email.label }} {{ form.email() }}
+
+            {% for error in form.email.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form.password.label }} {{ form.password() }}
+
+            {% for error in form.password.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form.confirm_password.label }} {{ form.confirm_password() }}
+
+            {% for error in form.confirm_password.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form.about_me.label }} {{ form.about_me(rows="5") }}
+
+            {% for error in form.about_me.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <div class="form-floating">
+            {{ form.image_file.label }} {{ form.image_file() }}
+
+            {% for error in form.image_file.errors %}
+                <small>{{ error }}</small><br>
+            {% endfor %}
+        </div>
+
+        <button type="submit" name="action" value="register" class="btn btn-primary w-100 py-2">Edit</button>
+        <!--{ form2.submit(class="btn btn-primary w-100 py-2", value="register") }}-->
+
+    </form>
+
+    {% include 'footer.html' %}
+{% endblock %}
